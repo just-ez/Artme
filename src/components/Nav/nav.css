@@ -1,0 +1,48 @@
+
+.navcontainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px 0px 10px;
+    align-items: center;
+    color:rgb(201, 136, 51);
+}
+.navcontainer ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navcontainer ul li{
+    list-style-type: none;
+    margin: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+.navcontainer h1{
+    margin: 0px 0px 0px 0px ;
+    font-size: 30px;
+    font-weight: 500;
+}
+.navcontainer p{
+    margin: 0px 0px 0px 0px;
+}
+.hrnav{
+    border:0.5px solid rgba(201, 136, 51, 0.433);
+}
+.drop{
+    width: 100%;
+    height: 0vh;
+    background-color:rgb(201, 136, 51);
+    position: absolute;
+    top: 0;
+    transition: 1.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.drop p{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    display: none;
+}
