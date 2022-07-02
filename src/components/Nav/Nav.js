@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 import './nav.css'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
@@ -33,7 +33,7 @@ const Nav = () => {
       <div className='drop'>
           <p className='damax'>Damax</p>
       </div>
-        {/* <nav className='navcontainer'>
+        <nav className='navcontainer'>
             <ul>
                 <li onClick={dropDown}>Home</li>
                 <li onClick={dropDown}>Artist</li>
@@ -43,8 +43,8 @@ const Nav = () => {
             <h1>Artme</h1>
             <p>follow us @Damax_hub</p>
 
-        </nav> */}
-        <Navbar>
+        </nav>
+        {/* <Navbar>
   <Container>
   <Nav className="me-auto">
       <Nav.Link href="#home">Home</Nav.Link>
@@ -59,7 +59,7 @@ const Nav = () => {
       </Navbar.Text>
     </Navbar.Collapse>
   </Container>
-</Navbar>
+</Navbar> */}
         <hr className='hrnav'></hr>
 
       </>
