@@ -5,13 +5,20 @@ import './index.css';
 import App from './App';
 import Gallery from "./components/Gallery/Gallery";
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Nav />
-    <Gallery />
-  </React.StrictMode>
+  <BrowserRouter>
+  <Nav />
+    <Routes>
+      <Route path="/" element={<App />} />
+        <Route path="gallery" element={<Gallery />} />
+        <Route path="home" element={<App />} />
+        
+      
+    </Routes>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

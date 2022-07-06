@@ -5,6 +5,7 @@
     padding: 5px 10px 0px 10px;
     align-items: center;
     color:rgb(201, 136, 51);
+    background-color: black;
     position: sticky;
     top: 0;
     z-index: 9999;
@@ -15,17 +16,19 @@
     margin: 0;
     padding: 0;
 }
-.navcontainer ul li{
+.navcontainer ul li, .link{
     list-style-type: none;
     margin: 0px 10px 0px 10px;
     cursor: pointer;
     transition: 1s color;
     transition: 1s font-size;
+    color: rgb(201, 136, 51);
+    text-decoration: none;
 }
-.navcontainer ul li:hover {
+.navcontainer ul li:hover, .link:hover {
     text-decoration: underline;
-    /* color: rgb(255, 187, 0); */
-    font-size: 20px;
+    color: rgb(201, 136, 51);
+    font-size: 18px;
 }
 .navcontainer h1{
     margin: 0px 0px 0px 0px ;
@@ -34,9 +37,6 @@
 }
 .navcontainer p{
     margin: 0px 0px 0px 0px;
-}
-.hrnav{
-    border:0.5px solid rgba(201, 136, 51, 0.433);
 }
 .drop{
     width: 100%;

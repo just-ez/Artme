@@ -1,5 +1,5 @@
 import React from 'react'
-import { link } from "react-router-dom";
+import { link , Outlet} from "react-router-dom";
 import anim from './../images/anim.jpg'
 import dance from './../images/dance.png'
 import eat from './../images/eat.jpg'
@@ -62,6 +62,7 @@ const Home = () => {
         <img src={nig} alt="anim" />
         <img src={umb} alt="anim" />
       </div>
+      <Outlet />
     </div>
   );
 }

@@ -1,4 +1,5 @@
  import React from 'react'
+import { Outlet, Link } from "react-router-dom";
 import './nav.css'
 // import Navbar from 'react-bootstrap/Navbar'
 // import Container from 'react-bootstrap/Container'
@@ -36,19 +37,23 @@ const Nav = () => {
       <nav className="navcontainer">
         <ul>
           <li onClick={dropDown}>
-        Home
+            <Link to="/home" className="link">
+              Home
+            </Link>
           </li>
+          <li onClick={dropDown}>Artist</li>
           <li onClick={dropDown}>
-           Artist
+            <Link to="/gallery" className="link">
+              shop
+            </Link>
           </li>
-          <li onClick={dropDown}>Gallery</li>
           <li onClick={dropDown}>About</li>
         </ul>
-        <h1>Artme</h1> 
+        <h1>Artme</h1>
         <p>follow us @Artme</p>
       </nav>
-  
-      <hr className="hrnav"></hr>
+      <Outlet />
+     
     </>
   );
 }

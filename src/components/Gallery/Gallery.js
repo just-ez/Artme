@@ -46,6 +46,20 @@ const gallery = ()=> {
             <p>artsyy</p>
             900$
           </div>
+          <div className="img-card">
+            <div className="img">
+              <img src={flow} alt="anim" />
+            </div>
+            <p>artsyy</p>
+            900$
+          </div>
+          <div className="img-card">
+            <div className="img">
+              <img src={lit} alt="anim" />
+            </div>
+            <p>artsyy</p>
+            900$
+          </div>
           
         </div>
       </div>
