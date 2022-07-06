@@ -1,8 +1,8 @@
  import React from 'react'
 import './nav.css'
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
-
+// import Navbar from 'react-bootstrap/Navbar'
+// import Container from 'react-bootstrap/Container'
+// import { Link } from "react-router-dom";
 const Nav = () => {
 
     function dropDown(){
@@ -29,42 +29,28 @@ const Nav = () => {
       }, 4000);
     }
   return (
-      <>
-      <div className='drop'>
-          <p className='damax'>Damax</p>
+    <>
+      <div className="drop">
+        <p className="damax">Artme</p>
       </div>
-        <nav className='navcontainer'>
-            <ul>
-                <li onClick={dropDown}>Home</li>
-                <li onClick={dropDown}>Artist</li>
-                <li onClick={dropDown}>Gallery</li>
-                <li onClick={dropDown}>About</li>
-            </ul>
-            <h1>Artme</h1>
-            <p>follow us @Damax_hub</p>
-
-        </nav>
-        {/* <Navbar>
-  <Container>
-  <Nav className="me-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav>
-    <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
-    <Navbar.Toggle />
-    <Navbar.Collapse className="justify-content-end">
-      <Navbar.Text>
-        Signed in as: <a href="#login">Mark Otto</a>
-      </Navbar.Text>
-    </Navbar.Collapse>
-  </Container>
-</Navbar> */}
-        <hr className='hrnav'></hr>
-
-      </>
-    
-  )
+      <nav className="navcontainer">
+        <ul>
+          <li onClick={dropDown}>
+        Home
+          </li>
+          <li onClick={dropDown}>
+           Artist
+          </li>
+          <li onClick={dropDown}>Gallery</li>
+          <li onClick={dropDown}>About</li>
+        </ul>
+        <h1>Artme</h1> 
+        <p>follow us @Artme</p>
+      </nav>
+  
+      <hr className="hrnav"></hr>
+    </>
+  );
 }
 
 export default Nav

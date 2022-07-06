@@ -2,9 +2,13 @@
 .navcontainer{
     display: flex;
     justify-content: space-between;
-    margin: 5px 10px 0px 10px;
+    padding: 5px 10px 0px 10px;
     align-items: center;
     color:rgb(201, 136, 51);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    padding: 10px;
 }
 .navcontainer ul{
     display: flex;
@@ -15,10 +19,17 @@
     list-style-type: none;
     margin: 0px 10px 0px 10px;
     cursor: pointer;
+    transition: 1s color;
+    transition: 1s font-size;
+}
+.navcontainer ul li:hover {
+    text-decoration: underline;
+    /* color: rgb(255, 187, 0); */
+    font-size: 20px;
 }
 .navcontainer h1{
     margin: 0px 0px 0px 0px ;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500;
 }
 .navcontainer p{
