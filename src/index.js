@@ -4,6 +4,8 @@ import Nav from "./components/Nav/Nav";
 import './index.css';
 import App from './App';
 import Gallery from "./components/Gallery/Gallery";
+import Footer from './components/footer/footer';
+import login from './components/form/singnup';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -15,9 +17,9 @@ root.render(
       <Route path="/" element={<App />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="home" element={<App />} />
-        
-      
     </Routes>
+    <Footer />
+ <login />
   </BrowserRouter>
 );
 

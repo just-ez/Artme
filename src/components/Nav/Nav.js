@@ -32,7 +32,7 @@ const Nav = () => {
   return (
     <>
       <div className="drop">
-        <p className="damax">Artme</p>
+        <div className="damax">Artme</div>
       </div>
       <nav className="navcontainer">
         <ul>
@@ -50,7 +50,7 @@ const Nav = () => {
           <li onClick={dropDown}>About</li>
         </ul>
         <h1>Artme</h1>
-        <p>follow us @Artme</p>
+        <div className='sign'>sign in</div>
       </nav>
       <Outlet />
      
