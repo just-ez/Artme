@@ -50,10 +50,13 @@ const Nav = () => {
           <li onClick={dropDown}>About</li>
         </ul>
         <h1>Artme</h1>
-        <div className='sign'>sign in</div>
+        <div className="sign">
+          <Link to="/signup" className="link">
+            sign in
+          </Link>
+        </div>
       </nav>
       <Outlet />
-     
     </>
   );
 }

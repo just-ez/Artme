@@ -5,21 +5,21 @@ import './index.css';
 import App from './App';
 import Gallery from "./components/Gallery/Gallery";
 import Footer from './components/footer/footer';
-import login from './components/form/singnup';
+import Signup from './components/form/singnup';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <Nav />
+    <Nav />
     <Routes>
       <Route path="/" element={<App />} />
-        <Route path="gallery" element={<Gallery />} />
-        <Route path="home" element={<App />} />
+      <Route path="gallery" element={<Gallery />} />
+      <Route path="home" element={<App />} />
+      <Route path="signup" element={<Signup />} />
     </Routes>
     <Footer />
- <login />
   </BrowserRouter>
 );
 

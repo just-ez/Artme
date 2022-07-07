@@ -44,9 +44,13 @@ const footer = ()=>{
      <div className="subscribe">
        subscribe to our news letter
        <div className="input">
-         <form className="form" action="" method="post">
+         <form
+           className="form"
+           action="http://localhost:3000/admin"
+           method="post"
+         >
            <input
-             typeof="email"
+             typeof="email" name="email"
              placeholder="input your email here.."
              required
            />
@@ -55,7 +59,8 @@ const footer = ()=>{
        </div>
      </div>
      <p>
-       Copyright © 2017-2022 MIT by Ezra design by damax hub and Ezra<br />
+       Copyright © 2017-2022 MIT by Ezra design by damax hub and Ezra
+       <br />
        Official NestJS Consulting Trilon.io hosted by Netlify
      </p>
      <Outlet />
