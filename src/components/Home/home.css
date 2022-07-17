@@ -130,3 +130,13 @@
 .imageslide::-webkit-scrollbar{
     display: none;
 }
+.video {
+    position: absolute;
+    top: 15%;
+    /* display: none; */
+    transform: 1s opacity;
+    width: 600px;
+    opacity: 0;
+    transition: 1s opacity;
+    cursor: pointer;
+} 

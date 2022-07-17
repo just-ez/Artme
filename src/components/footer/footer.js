@@ -54,7 +54,7 @@ const footer = ()=>{
              placeholder="input your email here.."
              required
            />
-           <button>subscribe</button>
+           <button className="button">subscribe</button>
          </form>
        </div>
      </div>

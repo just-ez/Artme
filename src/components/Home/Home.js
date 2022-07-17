@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { link , Outlet} from "react-router-dom";
 import anim from './../images/anim.jpg'
 import dance from './../images/dance.png'
@@ -13,8 +13,16 @@ import mil from './../images/mil.jpg'
 import mon from './../images/mon.jpg'
 import nig from './../images/nig.jpg'
 import umb from './../images/umb.jpg'
-
+import video from './../video/video.mp4';
 import './home.css'
+let showVid = (e)=>{
+let vid = document.getElementById('video')
+e.target.style.opacity = '.7'
+}
+let hideVid = (e)=>{
+let vid = document.getElementById('video')
+e.target.style.opacity = '0'
+}
 
 const Home = () => {
   return (
@@ -43,6 +51,17 @@ const Home = () => {
           <span id="e" className="SPAN">
             e
           </span>
+          <video
+            muted
+            autoPlay
+            loop
+            className="video"
+            id="video"
+            onMouseEnter={showVid}
+            onMouseLeave={hideVid}
+          >
+            <source src={video} type="video/mp4" />
+          </video>
         </div>
       </div>
       <h1 id="COLLECTION">
