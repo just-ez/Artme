@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <div className="main">
       <div class="arrow">
-        <p>scroll down</p>
+        {/* <p>Scroll down</p> */}
         <span></span>
         <span></span>
         <span></span>
@@ -68,6 +68,7 @@ const Home = () => {
         CHECK OUR <span id="COL">COLLECTION</span>
       </h1>
       <div className="imageslide">
+      <marquee width="100%" direction="left" scrollamount="12" behavior="scroll" >
         <img src={dance} alt="anim" />
         <img src={eat} alt="anim" />
         <img src={flow} alt="anim" />
@@ -80,6 +81,7 @@ const Home = () => {
         <img src={mon} alt="anim" />
         <img src={nig} alt="anim" />
         <img src={umb} alt="anim" />
+        </marquee>
       </div>
       <Outlet />
     </div>

@@ -13,9 +13,14 @@
 .arrow p {
     transform: rotate(90deg);
     font-size: 20px;
-  margin-left: -40.95px;
+  margin-left: -50.95px;
   margin-bottom: 100px;
   white-space: nowrap;
+  font-family: Noto Sans JP, sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: black;
+
 }
 .arrow span{
     display: block;
@@ -96,15 +101,15 @@
 }
 .imageslide {
     width: 100%;
-    height: 400px;
+    height: 600px;
     display: flex;
     overflow: scroll;
     align-items: center; 
 }
 
 .imageslide img:nth-child(even){
-    width: 100px;
-    height: 150px;
+    width: 300px;
+    height: 450px;
     margin: 0px 5px 0px 5px;
     filter: brightness(0.8);
     transition:  1s;
@@ -115,8 +120,8 @@
 }
 
 .imageslide img:nth-child(odd){
-    width: 200px;
-    height: 250px;
+    width: 400px;
+    height: 550px;
     margin: 0px 5px 0px 5px;
     filter: brightness(0.8);
     transition:  1s;
@@ -132,11 +137,18 @@
 }
 .video {
     position: absolute;
-    top: 15%;
+    top: 30%;
     /* display: none; */
     transform: 1s opacity;
-    width: 600px;
+    width: 700px;
     opacity: 0;
     transition: 1s opacity;
     cursor: pointer;
+    padding: 10px;
+    border: 1px solid rgba(165, 42, 42, 0.308);
 } 
+
+@media (max-width:900px) {
+    #COLLECTION{font-size: 6em;}
+    .video{display: none;}
+}

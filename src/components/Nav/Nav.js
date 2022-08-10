@@ -1,64 +1,129 @@
- import React from 'react'
+import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
-import './nav.css'
 // import Navbar from 'react-bootstrap/Navbar'
 // import Container from 'react-bootstrap/Container'
 // import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import "./Nav.scss";
+import { Box, Button, Typography,IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import NavSlide from "./NavSlide";
+
 const Nav = () => {
+  const [animation, setAnimation] = useState();
+  const [showText, setShowText] = useState(false);
 
-    function dropDown(){
-      let drop = document.querySelector('.drop')
-      let dam = document.querySelector('.damax')
+  function startAnim() {
+    setAnimation({
+      scale: [1, 200, 200, 1],
+      borderRadius: ["50%", "50%", "50%", "50%", "50%"],
+    });
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      setAnimation({});
       setTimeout(() => {
-          dam.style.display = 'inline' 
-      }, 1000);
-      drop.style.height='100vh'
-
+        document.body.style.overflow = "scroll";
+      }, 2000);
+    }, 2000);
+    setTimeout(() => {
+      setShowText(true);
       setTimeout(() => {
-          document.body.style.overflow='hidden'
-          drop.style.top='100%'
+        setShowText(false);
       }, 3000);
-
-      setTimeout(() => {
-          drop.style.height='0vh'
-          dam.style.display = 'none' 
-          setTimeout(() => {
-          drop.style.top='0'
-          document.body.style.overflow='scroll'
-        }, 1400);
-
-      }, 4000);
+    }, 500);
+  }
+  const [open, setOpen] = useState(false);
+  
+  
+     function handleOpenSlideNav() {
+      setOpen(true);
     }
+    
+      function CloseSideNav() {
+        setOpen(false);
+      }
   return (
     <>
-      <div className="drop">
-        <div className="damax">Artme</div>
-      </div>
-      <nav className="navcontainer">
-        <ul>
-          <li onClick={dropDown}>
-            <Link to="/home" className="link">
-              Home
-            </Link>
-          </li>
-          <li onClick={dropDown}>Artist</li>
-          <li onClick={dropDown}>
-            <Link to="/gallery" className="link">
-              shop
-            </Link>
-          </li>
-          <li onClick={dropDown}>About</li>
-        </ul>
-        <h1>Artme</h1>
-        <div className="sign">
-          <Link to="/signup" className="link">
-            sign in
+      <nav className="nav-container">
+        <Box className="nav-title">
+          <Box className="anim">
+            <motion.div
+              animate={animation}
+              transition={{ duration: 2.5 }}
+              className="anim-circle"
+            >
+              {showText && (
+                <Typography className="anim-circle-text">Artme ..</Typography>
+              )}
+            </motion.div>
+          </Box>
+          <Typography variant="h3" className="nav-title-text">
+            Artme{" "}
+          </Typography>
+        </Box>
+
+        <Box
+          className="nav-links"
+          sx={{
+            display: { xs: "none", md: "flex" },
+          }}
+        >
+          <ul>
+            <li className="nav-container-link" onClick={startAnim}>
+              <Link to="Artme/home" className="link">
+                Home
+              </Link>
+            </li>
+            <li className="nav-container-link" onClick={startAnim}>
+              <Link to="Artme/home" className="link">
+                Artist
+              </Link>
+            </li>
+            <li className="nav-container-link" onClick={startAnim}>
+              <Link to="Artme/gallery" className="link">
+                shop
+              </Link>
+            </li>
+            <li className="nav-container-link" onClick={startAnim}>
+              <Link to="Artme/home" className="link">
+                About
+              </Link>
+            </li>
+          </ul>
+        </Box>
+        <Box
+          className="btns"
+          sx={{
+            display: { xs: "none", md: "flex" },
+          }}
+        >
+          <Link to='Artme/signup' className="nav-btn-link">
+          <Button variant="outlined" className="nav-btn">
+            Login
+          </Button>
           </Link>
-        </div>
+          <Link to='Artme/signup' className="nav-btn-link">
+          <Button variant="outlined" className="nav-btn">
+            Signup
+          </Button>
+          </Link>
+        </Box>
+
+        <Box className="hamburger"  sx={{
+            display: { xs: "flex", md: "none" },
+          }} onClick={handleOpenSlideNav}>
+          <IconButton aria-label="menu" sx={{width:"50px",height:"50px"}}>
+            <MenuIcon sx={{ fontSize: 40,color:"#000000" }} />
+          </IconButton>
+        </Box>
+        
+        
       </nav>
-      <Outlet />
+        <NavSlide openSideNavValue={open} closeSideNav={CloseSideNav} />
+
+ 
     </>
   );
-}
+};
 
-export default Nav
+export default Nav;
