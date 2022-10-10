@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Artme/static/css/main.ec754f7a.css",
+    "main.js": "/Artme/static/js/main.edc7fe69.js",
+    "static/js/787.c202ca43.chunk.js": "/Artme/static/js/787.c202ca43.chunk.js",
+    "static/media/video.mp4": "/Artme/static/media/video.bbc8c9a759961e6ec7b0.mp4",
+    "static/media/dance.png": "/Artme/static/media/dance.89e7d79c5027da307feb.png",
+    "static/media/lit.jpg": "/Artme/static/media/lit.4815ead7a5ccb684d7b1.jpg",
+    "static/media/mam.jpg": "/Artme/static/media/mam.1cb20ff4bbc6845b44c9.jpg",
+    "static/media/anim.jpg": "/Artme/static/media/anim.399d474578bc8a52cf09.jpg",
+    "static/media/haus.jpg": "/Artme/static/media/haus.0001d36efc9fd305a2c0.jpg",
+    "static/media/mil.jpg": "/Artme/static/media/mil.29a009ad42367e557cd9.jpg",
+    "static/media/mast.jpg": "/Artme/static/media/mast.0c7af176da88486a7a2f.jpg",
+    "static/media/mon.jpg": "/Artme/static/media/mon.ac01f2423a5113125931.jpg",
+    "static/media/eat.jpg": "/Artme/static/media/eat.996fde5421b6754bd5f0.jpg",
+    "static/media/umb.jpg": "/Artme/static/media/umb.04ea296cc0716df45439.jpg",
+    "static/media/nig.jpg": "/Artme/static/media/nig.4f5e7a1e059229f44c1d.jpg",
+    "static/media/flow.jpg": "/Artme/static/media/flow.dcab613f4d8185291822.jpg",
+    "static/media/hand.jpg": "/Artme/static/media/hand.b768f4e50075d162f41f.jpg",
+    "index.html": "/Artme/index.html",
+    "main.ec754f7a.css.map": "/Artme/static/css/main.ec754f7a.css.map",
+    "main.edc7fe69.js.map": "/Artme/static/js/main.edc7fe69.js.map",
+    "787.c202ca43.chunk.js.map": "/Artme/static/js/787.c202ca43.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec754f7a.css",
+    "static/js/main.edc7fe69.js"
+  ]
+}
