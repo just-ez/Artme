@@ -40,7 +40,7 @@
     width: 100%;
     background-color: rgba(165, 42, 42, 0.029);
     padding-top: 100px;
-    position: relative;
+    z-index: -1000;
     .disappear-text {
       width: 100%;
       display: contents;
